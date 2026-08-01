@@ -485,7 +485,8 @@ export const footerConfig: FooterConfig = {
     { label: "Repairs", href: "#works" },
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "SMS Terms", href: "#sms-terms" },
+    { label: "SMS Terms", href: "/terms.html" },
+    { label: "Privacy Policy", href: "/privacy-policy.html" },
   ],
   navLinks2: [
     { label: "Instagram", href: "#", icon: "Instagram" },
