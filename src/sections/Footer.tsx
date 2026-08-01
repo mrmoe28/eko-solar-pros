@@ -209,10 +209,42 @@ export function Footer() {
           </div>
         </div>
 
+        {/* SMS / Text Messaging Terms — public opt-in disclosure for A2P compliance */}
+        <div
+          id="sms-terms"
+          className="mt-20 pt-8 border-t border-white/10 scroll-mt-24"
+        >
+          <h3 className="text-body text-white font-medium mb-3">
+            SMS / Text Messaging Terms
+          </h3>
+          <div className="text-body-sm text-white/40 space-y-3 max-w-3xl">
+            <p>
+              EKO Solar Pros operates an SMS alert program that sends operational
+              notifications — new service requests, appointment updates, deposit and
+              invoice payment confirmations, and payment-failure alerts — to the
+              business owner and authorized staff about solar service work.
+            </p>
+            <p>
+              <span className="text-white/60">How to opt in:</span> Authorized users
+              opt in from the authenticated EKO Solar Ops app Settings page under
+              "SMS Alerts" by entering their own mobile number and enabling the alert
+              toggles, or by texting <span className="text-white/60">START</span> to{' '}
+              <span className="text-white/60">(404) 738-5722</span>. Only the person
+              who controls that mobile number receives messages.
+            </p>
+            <p>
+              Message frequency varies. Message and data rates may apply. Reply{' '}
+              <span className="text-white/60">STOP</span> at any time to opt out, or{' '}
+              <span className="text-white/60">HELP</span> for help. We do not sell or
+              share mobile opt-in information with third parties for marketing.
+            </p>
+          </div>
+        </div>
+
         {/* Copyright */}
         <div
           ref={copyrightRef}
-          className="mt-20 pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-4"
+          className="mt-16 pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-4"
         >
           <p className="text-body-sm text-white/40">
             {footerConfig.copyright}
