@@ -1,7 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { heroConfig } from '../config';
+
+const SolarScene = lazy(() => import('../components/SolarScene'));
+import { Liquid } from '../components/canvasui/Liquid';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,28 +166,31 @@ export function Hero() {
           willChange: 'transform, opacity',
         }}
       >
-        <img
-          src={heroConfig.backgroundImage}
-          alt="EKO Solar Pros - Atlanta solar panel repair and troubleshooting specialists"
-          className="w-full h-full object-cover"
-          style={{ filter: 'brightness(0.9)' }}
-        />
-        {/* Chromatic aberration effect layers */}
-        <div
-          className="absolute inset-0 mix-blend-multiply opacity-50"
-          style={{
-            backgroundImage: `url(${heroConfig.backgroundImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: 'translateX(-2px)',
-            filter: 'url(#red-channel)',
-          }}
-        />
+        <Suspense
+          fallback={
+            <img
+              src={heroConfig.backgroundImage}
+              alt="EKO Solar Pros - Atlanta solar panel repair and troubleshooting specialists"
+              className="w-full h-full object-cover"
+              style={{ filter: 'brightness(0.6)' }}
+            />
+          }
+        >
+          <SolarScene />
+        </Suspense>
       </div>
 
-      {/* Content container */}
+      {/* Content container — Liquid adds a cursor-driven fluid trail over the headline */}
+      <Liquid
+        className="relative z-20 h-full w-full"
+        color={[1, 0.62, 0.12]}
+        intensity={0.6}
+        distortion={0.4}
+        blend={0.25}
+        radius={0.18}
+      >
       <div
-        className="relative z-20 h-full w-full flex flex-col justify-center items-center px-8"
+        className="relative h-full w-full flex flex-col justify-center items-center px-8"
         style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Main title */}
@@ -204,7 +210,7 @@ export function Hero() {
                 transform: `translateY(${(i % 2 === 0 ? -1 : 1) * 8}px)`,
               }}
             >
-              {char}
+              {char === ' ' ? ' ' : char}
             </span>
           ))}
         </h1>
@@ -228,6 +234,7 @@ export function Hero() {
           }}
         />
       </div>
+      </Liquid>
 
       {/* Services label - vertical left */}
       <div

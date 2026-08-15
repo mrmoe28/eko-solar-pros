@@ -9,8 +9,8 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  title: "EKO SOLAR PROS | Atlanta's Solar Troubleshooting Specialist",
-  description: "EKO SOLAR PROS specializes in solar panel repair, troubleshooting, and maintenance for existing systems in Atlanta, GA. We fix solar systems installed by any company and process RMA warranty claims. Get your solar working again!",
+  title: "EKO SOLAR PROS | Orphaned Solar Rescue & Battery Add-Ons | Atlanta",
+  description: "Installer gone out of business? EKO SOLAR PROS rescues orphaned solar systems in Atlanta, GA — diagnostics, inverter repair, RMA warranty claims, and battery storage add-ons for existing solar. We adopt systems installed by any company and get them producing again.",
   language: "en",
 };
 
@@ -54,9 +54,9 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   title: "EKO SOLAR PROS",
-  subtitle: "Solar Not Working? We'll Fix It.",
+  subtitle: "Installer Gone? Orphaned Solar? We'll Rescue It.",
   backgroundImage: "./hero-main.jpg",
-  servicesLabel: "Repair | Troubleshoot | Restore",
+  servicesLabel: "Rescue | Repair | Add Batteries",
   copyright: "© 2026 EKO SOLAR PROS Atlanta",
 };
 
@@ -78,9 +78,9 @@ export interface AboutConfig {
 }
 
 export const aboutConfig: AboutConfig = {
-  titleLine1: "We specialize in fixing solar systems that others can't,",
-  titleLine2: "bringing dead panels back to life and restoring your energy savings.",
-  description: "Founded in 2015, EKO SOLAR PROS has become Atlanta's trusted name in solar repair and troubleshooting. While other companies only install new systems, we focus on what happens after the installation - keeping your investment working. We've repaired over 1,500 solar systems across Georgia, many installed by other companies who refused to help. Our certified technicians diagnose and fix inverter failures, panel issues, wiring problems, and monitoring glitches. We also process RMA warranty equipment replacement claims, handling all the paperwork to get your faulty equipment replaced at no cost. No matter who installed your solar, we'll get it producing again.",
+  titleLine1: "We adopt the solar systems other companies abandoned,",
+  titleLine2: "bringing orphaned panels back to life and adding battery storage.",
+  description: "Thousands of Georgia homeowners have solar on their roof and no one to call — the installer went out of business, stopped answering, or never serviced what they sold. That's exactly who EKO SOLAR PROS exists for. We adopt orphaned systems installed by any company: our certified technicians diagnose and fix inverter failures, panel issues, wiring problems, and monitoring glitches, and we process RMA warranty claims so faulty equipment gets replaced at no equipment cost to you. Already producing? We add battery storage to existing solar so you keep the lights on through outages and use your own power at night. We've restored over 1,500 systems across Atlanta and Georgia — no matter who installed your solar, we'll take it from here.",
   image1: "./about-1.jpg",
   image1Alt: "EKO SOLAR PROS technician diagnosing solar system issues",
   image2: "./about-2.jpg",
@@ -156,35 +156,47 @@ export interface ServicesConfig {
 }
 
 export const servicesConfig: ServicesConfig = {
-  title: "Our Repair Services",
-  subtitle: "Expert troubleshooting and repair for any solar system, regardless of who installed it.",
+  title: "Rescue, Repair & Battery Services",
+  subtitle: "Expert care for orphaned solar systems, no matter who installed them — plus battery storage add-ons for solar that's already working.",
   services: [
+    {
+      id: "01",
+      title: "Orphaned System Rescue",
+      description: "Installer out of business or won't return calls? We adopt solar systems abandoned by their original installer — full system health check, we track down your equipment records and warranties, fix what's broken, and become your permanent point of contact for service going forward.",
+      image: "./solar-house-1.jpg"
+    },
+    {
+      id: "02",
+      title: "Battery Storage Add-Ons",
+      description: "Add battery backup to your existing solar system — keep your lights, fridge, and Wi-Fi on through outages, and use your own solar power at night instead of buying from the grid. We size, install, and integrate batteries from Tesla, Enphase, EG4, and other major brands with any existing array.",
+      image: "./solar-house-2.jpg"
+    },
     { 
-      id: "01", 
+      id: "03", 
       title: "System Diagnostics", 
       description: "Comprehensive analysis of your entire solar system. We identify why your panels aren't producing, using professional testing equipment to check inverters, panels, wiring, and monitoring systems. You'll get a clear diagnosis and repair plan.", 
       image: "./service-1.jpg" 
     },
     { 
-      id: "02", 
+      id: "04", 
       title: "Inverter Repair & Replacement", 
       description: "Inverters are the most common failure point. We repair or replace all major brands including SolarEdge, Enphase, SMA, and Fronius. Our technicians carry common parts for same-day repairs when possible.", 
       image: "./service-2.jpg" 
     },
     { 
-      id: "03", 
+      id: "05", 
       title: "Panel Replacement & Repair", 
       description: "Cracked, damaged, or underperforming panels? We replace individual panels or entire arrays, matching specifications to maintain system warranty and performance. We work with all panel manufacturers.", 
       image: "./service-3.jpg" 
     },
     { 
-      id: "04", 
+      id: "06", 
       title: "Monitoring & Electrical Fixes", 
       description: "Can't see your production data? We fix monitoring systems, app connections, and electrical issues including faulty wiring, grounding problems, and disconnects. Get your system visibility back.", 
       image: "./service-4.jpg" 
     },
     { 
-      id: "05", 
+      id: "07", 
       title: "RMA Warranty Claims", 
       description: "We handle all paperwork and processing for manufacturer warranty claims. If your inverter or panels are under warranty, we'll get them replaced at no equipment cost to you. We work directly with SolarEdge, Enphase, Tesla, and all major manufacturers.", 
       image: "./service-1.jpg" 
@@ -258,7 +270,7 @@ export interface PricingConfig {
 
 export const pricingConfig: PricingConfig = {
   title: "Solar Troubleshooting Specialist",
-  subtitle: "Transparent pricing for diagnostics and repairs. We work on all brands and systems installed by any company. We also process RMA warranty claims for equipment replacement at no cost to you.",
+  subtitle: "Transparent pricing for rescues, repairs, and battery add-ons. We work on all brands and systems installed by any company. We also process RMA warranty claims for equipment replacement at no cost to you.",
   ctaButtonText: "Schedule Service",
   plans: [
     { 
@@ -332,8 +344,16 @@ export interface FAQConfig {
 export const faqConfig: FAQConfig = {
   title: "Common Questions",
   faqs: [
-    { 
-      question: "Do you work on systems installed by other companies?", 
+    {
+      question: "My installer went out of business. Can you take over my system?",
+      answer: "Yes — this is our specialty. We call these 'orphaned' systems, and we adopt them. We start with a full diagnostic, recover your equipment model and serial information, check what's still under manufacturer warranty, fix what's broken, and become your permanent service contact. You'll never be stuck with a dead system and nobody to call again."
+    },
+    {
+      question: "Can I add batteries to my existing solar system?",
+      answer: "In almost every case, yes. Whether your system is grid-tied with no storage or has an older battery that needs upgrading, we size and install battery storage that integrates with your existing panels and inverter. We work with Tesla Powerwall, Enphase IQ Battery, EG4, and other major brands. Batteries keep your home powered during outages and let you use your solar power at night."
+    },
+    {
+      question: "Do you work on systems installed by other companies?",
       answer: "Absolutely! Most of our repairs are on systems we didn't install. We work on all brands and systems regardless of who originally installed them. Many solar companies go out of business or stop providing service - we're here to fill that gap and keep your system running."
     },
     { 
@@ -438,12 +458,14 @@ export interface ContactConfig {
 
 export const contactConfig: ContactConfig = {
   title: "Get Your Solar Working Again",
-  subtitle: "Schedule a diagnostic appointment or tell us about your solar problem. We repair all brands and systems.",
+  subtitle: "Installer disappeared? Want batteries added? Tell us about your system — we rescue and repair all brands, no matter who installed them.",
   nameLabel: "Name *",
   emailLabel: "Email *",
   projectTypeLabel: "Service Needed",
   projectTypePlaceholder: "Select service type...",
   projectTypeOptions: [
+    { value: "orphaned", label: "Orphaned System — Installer Gone" },
+    { value: "battery", label: "Battery Add-On for Existing Solar" },
     { value: "diagnostic", label: "Site Visit & Diagnostic ($400)" },
     { value: "inverter", label: "Inverter Issue" },
     { value: "panels", label: "Panel Problems" },
@@ -478,8 +500,8 @@ export interface FooterConfig {
 }
 
 export const footerConfig: FooterConfig = {
-  marqueeText: "We Fix Solar Systems That Others Wont",
-  marqueeHighlightChars: ["F", "S", "O", "W"],
+  marqueeText: "We Rescue Solar Systems Others Abandoned",
+  marqueeHighlightChars: ["R", "S", "O", "A"],
   navLinks1: [
     { label: "Home", href: "#hero" },
     { label: "Repairs", href: "#works" },
